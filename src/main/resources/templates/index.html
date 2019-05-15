@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+보내온 메시지는? 
+<a href="/register">회원등록</a>
+<p th:text="${test}"></p>
+<p th:text="${ljh}"></p>
+<table>
+<thead>
+	<tr>
+		<th>ID</th><th>Name</th><th>Company</th>
+	</tr>
+</thead>
+<tbody>
+	<tr th:each="user : ${users}">
+		<td th:text="${user.id}">ID</td>
+		<td th:text="${user.name}">Name</td>
+		<td th:text="${user.company}">Company</td>
+	</tr>
+</tbody>
+</table>
+</body>
+</html>
